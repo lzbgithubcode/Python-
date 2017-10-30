@@ -66,14 +66,10 @@
 
 
 # 三角函数  math模块
-import math
-
-# sin(x) 正玄 x  x应该是弧度值  = 角度/180 *pi  === radians()
-print(math.sin(math.radians(30)))
-
-
-
-
+# import math
+#
+# # sin(x) 正玄 x  x应该是弧度值  = 角度/180 *pi  === radians()
+# print(math.sin(math.radians(30)))
 
 
 
@@ -119,6 +115,130 @@ print(math.sin(math.radians(30)))
 # print(name[3:1:-1])
 # print(name[-1:-2:-1])
 # print(name[::-1])  #翻转字符串
+
+
+'''2.3字符函数操作'''
+# 2.3.1 查找计算
+# name = "我是liuzibin\n"
+# print(len(name))
+
+# find(self, sub, start=None, end=None) 查找子串的下标位置
+# 默认是 start = 0 end= len(str) 没有找到是-1  从左到右
+# name = "我是liuzibin"
+# num = name.find("i",4)
+# print(num)
+
+# rfind(self, sub, start=None, end=None)  从右到左 和find一样
+# num = name.rfind("i")
+# print(num)
+
+#  index(self, sub, start=None, end=None)   从左到右 和find 一样 只是找不到会报错
+# num = name.index("i",4)
+# print(num)
+
+#  rindex(self, sub, start=None, end=None)   从左到右 rfind 一样 只是找不到会报错
+
+# count 计算子字符串出现的个数
+# count = name.count("i")
+# print(count)
+
+# 2.3.2 转换
+
+name = "wo shi ziBin shi wo "
+
+# replace  replace(self, old, new, count=None) 替换字符串
+print(name.replace('s','b',1))
+
+
+# capitalize 把字符串首字符转化为大写
+print(name.capitalize())
+
+#  title  把字符串里面的子串转化为大写
+print(name.title())
+
+#  lower  把字符串全部转化为小写
+print(name.lower())
+
+#  upper  把字符串全部转化为大写
+print(name.upper())
+
+print(name)
+
+# 2.3.3 填充压缩
+# name = "lililiuzibinnnnn"
+# ljust(self, width, fillchar=None) 指定字符串靠左填充字符串的长度
+#    参数  width   结果字符串的长度
+#         fillchar 填充字符串的字符串
+# print(name.ljust(20,'1'))
+
+#  center(self, width, fillchar=None) 填充字符串在中间
+# print(name.center(20,'1'))
+
+# lstrip(self, chars=None) 从左侧开始移除原来指定的字符串（默认是空白字符）
+#print(name.lstrip("li"))
+#print(name)
+
+
+#  rstrip(self, chars=None)  从右侧开始移除原来指定的字符串（默认是空白字符）
+# print(name.rstrip('n'))
+# print(name)
+
+
+# 2.3.4 分割拼接
+# name = "liuzibin-sex-age-score-0830-1234567"
+# split(self, sep=None, maxsplit=-1) 字符串的分割 sep分割符号  maxsplit最大的分割次数
+# print(name.split('-'))
+# print(name.split('-',4))
+
+
+# partition(self, sep)  分割返回元祖 包括 左侧 + sep + 右侧内容  如果没有没有找到（"原字符串"，""，""）
+# print(name.partition('-'))
+# print(name.rpartition('-'))
+# print(name)
+
+
+# splitlines(self, keepends=None) 多行分割  根据的\n \r等分割符分割
+# name = "wo \n shi  \r zibin"
+# print(name.splitlines(False))
+# print(name)
+
+
+# join(self, iterable) 将给的的可迭代对象进行拼接 和 split反的
+# name = "xxx"
+# print(name.join('liuzibin'))
+
+
+# 2.3.5 判定
+#name = "liuzibin123.mp3"
+
+# isalpha  字符串中是否全是字母
+#print(name.isalpha())
+
+# isalpha  字符串中是否全是数字
+#print(name.isdigit())
+
+# isalnum  字符串中是否全是数字或者字母
+#print(name.isalnum())
+
+# isspace  字符串中是否全是空白符号 空格 换行之类
+#print(name.isspace())
+
+# startswith(self, prefix, start=None, end=None) 判断字符是否什么前缀开头
+#print(name.startswith("zi",3,8))
+
+# endswith(self, prefix, start=None, end=None) 判断字符是否什么结尾开头
+#print(name.endswith(".mp3"))
+
+
+# in 字符串是否被包含
+# print("zi" in "woshizibin")
+
+
+
+
+
+
+
 
 
 
