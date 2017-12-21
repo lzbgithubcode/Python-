@@ -93,3 +93,17 @@ g1 = test()
 for i in g1:
     print(i)
 
+'''6.递归函数 函数A里面调用函数A  传递和回归'''
+
+# 求9的阶层  9 * 8 * 7 * ....1
+
+# 先分解 ，如果知道结果就直接返回
+def jiecheng(n):
+    if n == 1:
+        return 1
+    # n ！= 1
+    return n * jiecheng(n- 1)
+
+
+result = jiecheng(4)
+print(result)

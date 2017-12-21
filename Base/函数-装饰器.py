@@ -1,6 +1,6 @@
 '1. 装饰器：给一个函数增加额外的功能'''
 
-# 功能函数
+#功能函数
 # def ftp():
 #     print("发图片")
 # def fwz():
@@ -41,30 +41,30 @@
 
 '''2. 装饰器 语法糖'''
 
-# # 功能函数
-# def checkIsLogin(func):  # 闭包的使用
-#     def inner():
-#         print("登录验证......")
-#         func()
-#     return inner
-#
-# @checkIsLogin
-# def ftp():
-#     print("发图片")
-#
-# # ftp = checkIsLogin(ftp)
-#
-# @checkIsLogin
-# def fwz():
-#     print("发文字")
-#
-# # fwz = checkIsLogin(fwz)
-#
-# buttonIndex = 1
-# if buttonIndex == 0:
-#     ftp()
-# else:
-#     fwz()
+# 功能函数
+def checkIsLogin(func):  # 闭包的使用
+    def inner():
+        print("登录验证......")
+        func()
+    return inner
+
+@checkIsLogin
+def ftp():
+    print("发图片")
+
+# ftp = checkIsLogin(ftp)
+
+@checkIsLogin
+def fwz():
+    print("发文字")
+
+# fwz = checkIsLogin(fwz)
+
+buttonIndex = 1
+if buttonIndex == 0:
+    ftp()
+else:
+    fwz()
 
 '''3.装饰器的执行时间'''
 #实现功能  为发说说函数增加额外的功能
@@ -89,38 +89,39 @@
 '''4.装饰器的叠加'''
 # 从函数的头部开始 向上装饰    执行 从代码的行数  从上到下
 
-# def print_line(func):
-#     print("------print_line-----")
-#     def inner():
-#         print("-----------")
-#         func()
-#         print("-----------")
-#     return inner
-#
-#
-# def print_star(func):
-#     print("*****print_star******")
-#     def inner():
-#         print("***********")
-#         func()
-#         print("***********")
-#     return inner
-#
-# @print_line  #print_content =  print_line（print_content）
-# @print_star  # print_content =  print_star（print_content）
-# def print_content():
-#     print("刘子彬笔记")
-#
-#
-# #*****print_star******
-# # ------print_line-----
-# # -----------
-# # ***********
-# # 刘子彬笔记
-# # ***********
-# # -----------
-#
-# print_content()
+def print_line(func):
+    print("------print_line-----")
+    def inner():
+        print("-----------")
+        func()
+        print("-----------")
+    return inner
+
+
+def print_star(func):
+    print("*****print_star******")
+    def inner():
+        print("***********")
+        func()
+        print("***********")
+    return inner
+
+@print_line  #print_content =  print_line（print_content）
+@print_star  # print_content =  print_star（print_content）
+def print_content():
+    print("刘子彬笔记")
+
+print_content()
+#执行结果
+#*****print_star******
+# ------print_line-----
+# -----------
+# ***********
+# 刘子彬笔记
+# ***********
+# -----------
+
+
 
 '''4.装饰器装饰有参数的函数'''
 
@@ -144,25 +145,25 @@
 
 '''5.装饰器自身有参数'''
 
-def getzsq(c):
-    def zsq(func):
-        def innner(*args, **kwargs):
-            print("装饰器")
-            print(c * 30)
-            res = func(*args, **kwargs)
-            return res
-
-        return innner
-    return zsq
-
-
-def zsq(func):
-    def innner(*args,**kwargs):
-        print("装饰器")
-        print("+" * 30)
-        res = func(*args,**kwargs)
-        return res
-    return innner
+# def getzsq(c):
+#     def zsq(func):
+#         def innner(*args, **kwargs):
+#             print("装饰器")
+#             print(c * 30)
+#             res = func(*args, **kwargs)
+#             return res
+#
+#         return innner
+#     return zsq
+#
+#
+# def zsq(func):
+#     def innner(*args,**kwargs):
+#         print("装饰器")
+#         print("+" * 30)
+#         res = func(*args,**kwargs)
+#         return res
+#     return innner
 
 
 
@@ -172,11 +173,11 @@ def zsq(func):
 #     print(num)
 
 
-@getzsq("===")  #主要保证回来的是一个装饰器就可以
-def pnum(num):
-    print(num)
-
-pnum(3)
+# @getzsq("===")  #主要保证回来的是一个装饰器就可以
+# def pnum(num):
+#     print(num)
+#
+# pnum(3)
 
 
 

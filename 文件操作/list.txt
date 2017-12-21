@@ -1,0 +1,13 @@
+files/avi
+	a.avi
+	e.avi
+
+files/jpg
+	b.jpg
+	c.jpg
+
+files/txt
+	dst_souce.txt
+	souce.txt
+
+

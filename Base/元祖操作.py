@@ -16,8 +16,8 @@
 
 # 2.1 查询某个元素或者多个元素
 
-items = (1,2,34,4,5,5,6,7,8,9)
-print(items)
+# items = (1,2,34,4,5,5,6,7,8,9)
+# print(items)
 # print(items[2],items[:2:],items[::-1])
 
 # 2.2 获取元祖值
@@ -30,12 +30,13 @@ print(items)
 # print(1 in items)
 
 
+
 # 2.4 拼接(乘法  家法)和拆包
 #
 # item2 = ('a','b','c')
 # print(items + item2)
 # print(item2 * 2)
-
+#
 # a,b = (10,20)
 # a,b = (b,a)
 # print(a,b)

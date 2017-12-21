@@ -214,7 +214,7 @@ print(name)
 # isalpha  字符串中是否全是字母
 #print(name.isalpha())
 
-# isalpha  字符串中是否全是数字
+# isdigit  字符串中是否全是数字
 #print(name.isdigit())
 
 # isalnum  字符串中是否全是数字或者字母

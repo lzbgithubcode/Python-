@@ -31,15 +31,15 @@ print(nums)
 # append  增加在最后 ,修改原来的列表
 # nums.append(5)
 # print(nums)
-
-#insert(self, index, p_object)  插入到index之后
+#
+# insert(self, index, p_object)  插入到index之后
 # nums.insert(2,5)
 # print(nums)
-
+#
 # extend() 追加后面的可迭代序列  iterable  字符串 列表 元祖
 # nums.extend([6,7,8])
 # print(nums)
-
+#
 # 乘法  加法 运算
 # print(nums *3)
 # print(nums + [6,7,8])
@@ -85,17 +85,17 @@ print(nums)
 # print(nums[1:3])
 
 
-# 根据元素遍历 for item in items
-items = ["a","a","d","a","c"]
-print(items)
+# # 根据元素遍历 for item in items
+# items = ["a","a","d","a","c"]
+# print(items)
 # currentIndex = 0
 # for x in items:
 #     print(items.index(x,currentIndex))
 #     currentIndex += 1
 
 
-# 根据索引遍历
-
+# # 根据索引遍历
+#
 # # 1.创建一个索引列表
 # count = len(items)
 # indexs = range(count)
@@ -103,9 +103,9 @@ print(items)
 # # 2.遍历索引列表
 # for index in indexs:
 #     print(index,items[index])
-
-# 根据列表创建枚举对象（enumerate）, 枚举对象直接被遍历
-
+#
+# #根据列表创建枚举对象（enumerate）, 枚举对象直接被遍历
+#
 # result = list(enumerate(items))
 # print(result)
 # for idx,value  in enumerate(items):
@@ -124,7 +124,7 @@ print(items)
 
 '''
 
-# 使用迭代器遍历,
+# #使用迭代器遍历,
 # itemiter = iter(items)
 # for value in itemiter:
 #     print(value)
@@ -133,15 +133,15 @@ print(items)
 
 '2.4其他'''
 
-# 2.4.1判断列表 in not in
+# #2.4.1判断列表 in not in
 # print("a" in items)
-
-# 2.4.2 比较列表  == >   <
-
-# 2.4.3 排序 sort(self, key=None, reverse=False) key = 排序关键字  reverse = yes 默认是升序
-
+#
+# #2.4.2 比较列表  == >   <
+#
+# #2.4.3 排序 sort(self, key=None, reverse=False) key = 排序关键字  reverse = yes 默认是升序
+#
 # print(sorted(items,reverse= True))
-
+#
 # infos = [("zb",18),("xi",32),("fb",12),("zd",18),("zx",21),("zc",23)]
 # print(infos)
 #

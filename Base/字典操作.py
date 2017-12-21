@@ -1,9 +1,9 @@
 '1.字典的定义,key不能重复，key 是任意不可变类型，hash 方式实现'''
 
 #方式一
-# person = {'name':'zb','age':18}
-# print(person)
-# print(person['name'])
+person = {'name':'zb','age':18}
+print(person)
+print(person['name'])
 
 
 #方式二 fromkeys
